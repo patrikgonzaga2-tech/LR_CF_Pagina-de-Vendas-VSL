@@ -10,6 +10,7 @@
   function openGate() {
     if (!$postGate) return;
     $postGate.classList.add('open');
+    document.body.classList.add('gate-open');
     setTimeout(function () {
       var res = document.getElementById('resonance');
       if (res) res.scrollIntoView({ behavior: 'smooth', block: 'start' });
