@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Redirecionando...</title>
+
+  <!--
+  ═══════════════════════════════════════════════════════════════
+  PÁGINA ROTADORA — Corpo Feliz
+  ═══════════════════════════════════════════════════════════════
+  Função: distribuir tráfego aleatoriamente (25% cada) entre as
+          variantes ativas, preservando todos os query params.
+  Variantes ativas: 5, 6, 9, 14
+  ═══════════════════════════════════════════════════════════════
+  -->
+
+  <script>
+    (function () {
+      var variants = [5, 6, 9, 14];
+      var pick = variants[Math.floor(Math.random() * variants.length)];
+      var target = 'corpo-feliz-var' + pick + '.html' + window.location.search + window.location.hash;
+      window.location.replace(target);
+    })();
+  </script>
+
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=corpo-feliz-var9.html">
+  </noscript>
+</head>
+
+<body>
+  <p style="font-family: system-ui, sans-serif; text-align: center; padding: 40px;">
+    Redirecionando... <a href="corpo-feliz-var9.html">clique aqui se nada acontecer</a>.
+  </p>
+</body>
+
+</html>
