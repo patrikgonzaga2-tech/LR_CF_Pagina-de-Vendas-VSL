@@ -4,7 +4,10 @@ import { SocialProof1, SocialProof2 } from '@/components/gallery'
 import { Metodo } from '@/components/metodo'
 import { ComoFunciona } from '@/components/como-funciona'
 import { Beneficios, Entrega, Bonus, Comparacao } from '@/components/beneficios-entrega'
-import { Stack, Planos, Garantia, Faq, CtaFinal, Footer } from '@/components/stack-planos-faq'
+import { Garantia, Faq, Footer } from '@/components/stack-planos-faq'
+import { StackWhats } from '@/components/stack-whats'
+import { Aplicacao } from '@/components/aplicacao'
+import { RewriteCtas } from './_rewrite-ctas'
 
 const marqueeItems1 = [
   'Treinos Hormonais',
@@ -29,6 +32,7 @@ const marqueeItems2 = [
 export default function Page() {
   return (
     <main>
+      <RewriteCtas />
       <Hero />
       <MarqueeStrip items={marqueeItems1} />
       <SocialProof1 />
@@ -40,11 +44,10 @@ export default function Page() {
       <Entrega />
       <Bonus />
       <Comparacao />
-      <Stack />
-      <Planos />
+      <StackWhats />
       <Garantia />
       <Faq />
-      <CtaFinal />
+      <Aplicacao />
       <Footer />
     </main>
   )

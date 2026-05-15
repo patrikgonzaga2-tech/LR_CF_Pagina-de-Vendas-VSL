@@ -94,14 +94,14 @@ export function Hero({ hideBottomContent = false }: HeroProps) {
         <div className="reveal reveal-d3 mb-6 sm:mb-10">
           <div className="rounded-2xl overflow-hidden sm:rounded-none">
             <vturb-smartplayer
-              id="vid-69d7a4db299a69aeb30006b1"
+              id="ab-6a073e90f38f377fba3ca511"
               style={{ display: 'block', margin: '0 auto', width: '100%' }}
               aria-label="Vídeo de apresentação da Comunidade Corpo Feliz"
               role="region"
             />
           </div>
           <Script
-            src="https://scripts.converteai.net/9406f62d-bd68-44a6-971a-c0a91bdff3c8/players/69d7a4db299a69aeb30006b1/v4/player.js"
+            src="https://scripts.converteai.net/9406f62d-bd68-44a6-971a-c0a91bdff3c8/ab-test/6a073e90f38f377fba3ca511/player.js"
             strategy="afterInteractive"
           />
         </div>
