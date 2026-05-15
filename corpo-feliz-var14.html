@@ -298,52 +298,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
       </section>
 
-      <!-- ── BLOCO 4: PLANOS ── -->
-      <section class="page-section s-plans reveal" id="planos" aria-labelledby="plans-h2">
-        <div class="container">
-          <div class="plans__header">
-            <span class="eyebrow">Escolha seu plano</span>
-            <h2 class="section-headline" id="plans-h2">Comece hoje. Resultado nas partes que mais importam.</h2>
-            <div class="section-divider"></div>
-          </div>
+      <!-- ── BLOCO 4: OFERTA ── -->
+      <section class="page-section s-plans s-plans--offer reveal" id="planos" aria-labelledby="plans-h2">
+        <div class="container container--wide">
 
-          <div class="plans__grid">
+          <div class="offer-card">
 
-            <!-- ANUAL — featured, mobile first -->
-            <div class="plan-card plan-card--featured" style="order: -1;">
-              <span class="plan-badge">✦ Recomendado</span>
-              <p class="plan-name">Plano Anual</p>
-              <p class="plan-original">De R$ 228,00</p>
-              <p class="plan-price">12x de R$ 19,00</p>
-              <p class="plan-or">ou</p>
-              <p class="plan-full">R$ 187 à vista</p>
-              <p class="plan-desc">Acesso completo por 12 meses</p>
-              <div class="plan-divider"></div>
-              <!-- TODO: substituir href pelo link real do checkout Anual -->
-              <a href="https://payfast.greenn.com.br/78187/offer/a5142a" class="plan-cta" target="_blank" rel="noopener">Quero o Anual →</a>
-              <p class="plan-microcopy">Cartão · PIX · Boleto · Acesso imediato</p>
+            <!-- COLUNA ESQUERDA — PREÇO -->
+            <div class="offer-card__left">
+              <span class="offer-tag">Acesso completo</span>
+              <h2 class="offer-headline" id="plans-h2">Tudo que está incluso na Comunidade.</h2>
+              <p class="offer-subtext">Um ecossistema completo — treinos, desafios, nutrição, e-books, encontros ao vivo, comunidade e acompanhamento diário.</p>
+
+              <div class="offer-price">
+                <p class="offer-price__original">De <s>R$ 497</s></p>
+                <p class="offer-price__main">R$ 19<span>/mês</span></p>
+                <p class="offer-price__note">Acesso completo por 12 meses · Acesso imediato</p>
+                <a href="https://payfast.greenn.com.br/78187/offer/a5142a" class="plan-cta" target="_blank" rel="noopener">Garantir meu acesso com desconto →</a>
+                <p class="plan-microcopy">Cartão · PIX · Boleto · Acesso imediato</p>
+              </div>
             </div>
 
-            <!-- MENSAL -->
-            <div class="plan-card">
-              <p class="plan-name">Plano Mensal</p>
-              <p class="plan-price">R$ 59<small>/mês</small></p>
-              <p class="plan-desc" style="margin-top:16px;">Pra testar antes de se comprometer. Cancele quando quiser.
-              </p>
-              <div class="plan-divider"></div>
-              <!-- TODO: substituir href pelo link real do checkout Mensal -->
-              <a href="https://payfast.greenn.com.br/148344/offer/zVvw8v" class="plan-cta" target="_blank" rel="noopener">Quero o Mensal →</a>
-              <p class="plan-microcopy">Acesso imediato · Muda pro Anual quando quiser</p>
+            <!-- COLUNA DIREITA — ENTREGÁVEIS -->
+            <div class="offer-card__right">
+
+              <div class="offer-section">
+                <span class="offer-section__label">Treinos e Trilhas</span>
+                <ul class="offer-list">
+                  <li><span class="offer-list__item">Avaliação Física de entrada</span><span class="offer-list__price">R$ 97</span></li>
+                  <li><span class="offer-list__item">Trilha Completa Iniciante ao Avançado</span><span class="offer-list__price">R$ 197</span></li>
+                  <li><span class="offer-list__item">Treinos por fase do ciclo + atualizações mensais</span><span class="offer-list__price">R$ 97</span></li>
+                  <li><span class="offer-list__item">Treinos Mega Curtos 3 e 5min</span><span class="offer-list__price">R$ 47</span></li>
+                  <li><span class="offer-list__item">Fichas Academia · Metabólicos · Viagem · Localizados</span><span class="offer-list__price">R$ 37</span></li>
+                  <li><span class="offer-list__item">Relaxamento + Mobilidade + Ioga + Lombar</span><span class="offer-list__price">R$ 22</span></li>
+                </ul>
+              </div>
+
+              <div class="offer-section">
+                <div class="offer-section__head">
+                  <span class="offer-section__label">Desafios + Nutrição</span>
+                  <span class="offer-badge">Grátis hoje</span>
+                </div>
+                <ul class="offer-list">
+                  <li><span class="offer-list__item">Lipo 21D + Módulo LPF Completo</span></li>
+                  <li><span class="offer-list__item">Seca em 21 + Desafio 7x + 30x + Detox</span></li>
+                  <li><span class="offer-list__item">Calculadora + Plano + Receitas</span></li>
+                </ul>
+              </div>
+
+              <div class="offer-section">
+                <div class="offer-section__head">
+                  <span class="offer-section__label">Comunidade</span>
+                  <span class="offer-badge">Grátis hoje</span>
+                </div>
+                <ul class="offer-list">
+                  <li><span class="offer-list__item">4 Protocolos de Emagrecimento + Encontros ao Vivo gravados</span></li>
+                  <li><span class="offer-list__item">Suporte com a Profe Laura Rosa todo dia + Comunidade das Musas</span></li>
+                  <li><span class="offer-list__item">A Laura no WhatsApp todos os dias</span></li>
+                </ul>
+              </div>
+
             </div>
 
           </div>
 
-          <p class="plans__trust">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-            </svg>
-            Pagamento 100% seguro · Acesso imediato após confirmação
-          </p>
+          <p class="plans__trust">🔒 Pagamento 100% seguro · Acesso imediato após confirmação</p>
         </div>
       </section>
 
