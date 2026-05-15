@@ -1,0 +1,134 @@
+import type { Metadata } from 'next'
+import { Bricolage_Grotesque, DM_Sans } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
+import Script from 'next/script'
+import './globals.css'
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: ['400', '500', '700', '800'],
+  display: 'swap',
+})
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-body',
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+})
+
+export const metadata: Metadata = {
+  title: 'Comunidade Corpo Feliz — Laüra Rosa',
+  description: 'Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios. Em casa. Em 15 minutos. Com a Laüra do seu lado todo dia.',
+  generator: 'v0.app',
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    title: 'Comunidade Corpo Feliz — Laüra Rosa',
+    description: 'Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios. Em casa. Em 15 minutos. Com a Laüra do seu lado todo dia.',
+    siteName: 'Comunidade Corpo Feliz',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Comunidade Corpo Feliz — Laüra Rosa',
+    description: 'Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios.',
+  },
+  icons: {
+    icon: [
+      {
+        url: '/icon-light-32x32.png',
+        media: '(prefers-color-scheme: light)',
+      },
+      {
+        url: '/icon-dark-32x32.png',
+        media: '(prefers-color-scheme: dark)',
+      },
+      {
+        url: '/icon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    apple: '/apple-icon.png',
+  },
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html lang="pt-BR" className={`${bricolage.variable} ${dmSans.variable}`} suppressHydrationWarning>
+      <body className="font-sans antialiased" style={{ fontFamily: 'var(--font-body, DM Sans, sans-serif)' }} suppressHydrationWarning>
+        <Script id="gtm" strategy="afterInteractive">{`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-TP6HTL5G');
+        `}</Script>
+        {/* GTM noscript fallback */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TP6HTL5G"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {children}
+        <Analytics />
+        {/* Script de rastreio UTM — roda somente quando a página está ociosa */}
+        <Script id="utm-tracker" strategy="lazyOnload">{`
+          console.log('%cScript de rastreio by Comunidade Nova Ordem do Digital - Dericson Calari e Samuel Choairy', 'color: purple; font-size: 20px;');
+          (function () {
+            let parametros = ["utm_source"];
+            const url = new URL(window.location.href);
+            const params = new URLSearchParams(url.search);
+            for (const [key] of params) {
+              if (!parametros.includes(key)) parametros.push(key);
+            }
+            const urlParamsCapt = new URLSearchParams(window.location.search);
+            const urlParamsCaptReferrer = new URLSearchParams(document.referrer.split('?')[1] || '');
+            let utms = {};
+            parametros.forEach(el => {
+              if (el === "utm_source") {
+                utms[el] = urlParamsCapt.get(el) ?? (document.referrer ? (urlParamsCaptReferrer.get(el) ?? new URL(document.referrer).hostname) : "direto");
+              } else {
+                utms[el] = urlParamsCapt.get(el) ?? (urlParamsCaptReferrer.get(el) ?? "");
+              }
+            });
+            let scks = Object.values(utms).filter(value => value !== "");
+            let currentSckValues = [];
+            if (urlParamsCapt.get('sck')) currentSckValues = urlParamsCapt.get('sck').split('|');
+            scks = scks.filter(value => !currentSckValues.includes(value));
+            const updateLinks = (el, elURL) => {
+              const elSearchParams = new URLSearchParams(elURL.search);
+              let modified = false;
+              for (let key in utms) {
+                if (!elSearchParams.has(key)) { elSearchParams.append(key, utms[key]); modified = true; }
+              }
+              if (!elSearchParams.has('sck') && scks.length > 0) { elSearchParams.append('sck', scks.join('|')); modified = true; }
+              if (modified) return elURL.origin + elURL.pathname + "?" + elSearchParams.toString();
+              return el.href;
+            };
+            document.querySelectorAll('a').forEach(el => {
+              const elURL = new URL(el.href);
+              if (!elURL.hash) el.href = updateLinks(el, elURL);
+            });
+            document.querySelectorAll('iframe').forEach(iframe => {
+              let actualSrc = iframe.hasAttribute('data-src') ? iframe.getAttribute('data-src') : iframe.src;
+              if (actualSrc) {
+                const iframeURL = new URL(actualSrc);
+                if (iframe.hasAttribute('data-src')) iframe.setAttribute('data-src', updateLinks(iframe, iframeURL));
+                else iframe.src = updateLinks(iframe, iframeURL);
+              }
+            });
+          })();
+        `}</Script>
+      </body>
+    </html>
+  )
+}
