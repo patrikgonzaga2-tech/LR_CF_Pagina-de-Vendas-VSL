@@ -1,4 +1,23 @@
+# OS files
 .DS_Store
 Thumbs.db
 *.log
+
+# Editor / agent
 .claude/
+
+# Node / Next
+node_modules
+.next/
+.vercel
+next.user-config.*
+
+# Env
+.env*.local
+
+# v0 sandbox
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+.snowflake/
+.v0-trash/
