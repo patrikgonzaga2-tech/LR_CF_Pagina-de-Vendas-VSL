@@ -8,24 +8,12 @@
   <script>
     (function () {
       var pages = [
-        'corpo-feliz-page.html',
-        'corpo-feliz-var1.html',
-        'corpo-feliz-var2.html',
-        'corpo-feliz-var3.html',
-        'corpo-feliz-var4.html',
         'corpo-feliz-var5.html',
         'corpo-feliz-var6.html',
-        'corpo-feliz-var7.html',
-        'corpo-feliz-var8.html',
         'corpo-feliz-var9.html',
-        'corpo-feliz-var10.html',
-        'corpo-feliz-var11.html',
-        'corpo-feliz-var12.html',
-        'corpo-feliz-var13.html',
-        'corpo-feliz-var14.html',
-        'corpo-feliz-var15.html'
+        'corpo-feliz-var14.html'
       ];
-      var variants = ['v0','v1','v2','v3','v4','v5','v6','v7','v8','v9','v10','v11','v12','v13','v14','v15'];
+      var variants = ['v5','v6','v9','v14'];
       var idx  = Math.floor(Math.random() * pages.length);
       var sp   = new URLSearchParams(window.location.search);
       sp.set('variante', variants[idx]);
@@ -34,7 +22,7 @@
     })();
   </script>
   <noscript>
-    <meta http-equiv="refresh" content="0;url=corpo-feliz-page.html">
+    <meta http-equiv="refresh" content="0;url=corpo-feliz-var9.html">
   </noscript>
 </head>
 <body></body>
