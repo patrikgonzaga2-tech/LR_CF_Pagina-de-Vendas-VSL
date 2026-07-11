@@ -784,6 +784,7 @@ export function FooterLight() {
         />
         <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', lineHeight: 1.8 }}>
           © Corpo Feliz · Laüra Rosa · Todos os direitos reservados<br />
+          CNPJ: 53.742.824/0001-01<br />
           Os resultados podem variar de pessoa para pessoa. Consulte seu médico antes de iniciar qualquer programa de exercícios.
         </p>
       </div>

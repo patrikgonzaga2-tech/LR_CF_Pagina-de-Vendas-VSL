@@ -21,7 +21,6 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: 'Comunidade Corpo Feliz — Laüra Rosa',
   description: 'Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios. Em casa. Em 15 minutos. Com a Laüra do seu lado todo dia.',
-  generator: 'v0.app',
   robots: { index: true, follow: true },
   openGraph: {
     type: 'website',
@@ -34,23 +33,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Comunidade Corpo Feliz — Laüra Rosa',
     description: 'Mais de 1.000 mulheres já descobriram o que muda quando o treino respeita os hormônios.',
-  },
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
   },
 }
 

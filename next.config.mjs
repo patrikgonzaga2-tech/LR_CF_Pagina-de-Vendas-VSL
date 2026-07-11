@@ -23,6 +23,17 @@ const nextConfig = {
       },
     ]
   },
+  async redirects() {
+    return [
+      {
+        // Raiz do domínio vai direto pra candidatura por WhatsApp.
+        // Os UTMs do anúncio são preservados automaticamente pelo Next.
+        source: '/',
+        destination: '/cf-whats',
+        permanent: false,
+      },
+    ]
+  },
 }
 
 export default nextConfig
