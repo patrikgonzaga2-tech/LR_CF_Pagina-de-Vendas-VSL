@@ -2,7 +2,7 @@
 
 import { useReveal } from '@/hooks/use-reveal'
 
-const WA_HREF = 'https://wa.link/secacomigo3'
+const WA_HREF = 'https://wa.link/suportelaura'
 
 // ────────────────────────────────────────────────────────────────────
 // HERO — sem vídeo

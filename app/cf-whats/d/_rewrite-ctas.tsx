@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 
-const WHATSAPP_HREF = 'https://wa.link/secacomigo3'
+const WHATSAPP_HREF = 'https://wa.link/suportelaura'
 
 // Reescreve em runtime todos os botões de CTA que apontam pra âncora #planos
 // ou pro checkout direto (payfast.greenn) — em /cf-whats todos devem ir

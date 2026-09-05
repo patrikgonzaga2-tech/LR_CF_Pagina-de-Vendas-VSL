@@ -64,7 +64,7 @@ export function StackWhats() {
             </p>
             <div className="reveal reveal-d3 mt-9">
               <a
-                href="https://wa.link/secacomigo3"
+                href="https://wa.link/suportelaura"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Conversar com o time da Laüra no WhatsApp"

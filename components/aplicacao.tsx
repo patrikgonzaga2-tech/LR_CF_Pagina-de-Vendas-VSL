@@ -63,7 +63,7 @@ export function Aplicacao() {
         </p>
         <div className="reveal reveal-d3 flex flex-wrap gap-3.5 justify-center mb-7">
           <a
-            href="https://wa.link/secacomigo3"
+            href="https://wa.link/suportelaura"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Conversar com a Laüra no WhatsApp"
